@@ -16,7 +16,7 @@
   margin: 0;
   min-height: 100vh;
   overflow-y: auto;  /* Changed from 'hidden' to enable scrolling */
-  overflow-x: hidden;
+  overflow-x: overflow-y: auto;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   background-color: #fffED3;
   color: #5a363d;
@@ -25,6 +25,7 @@
       position: absolute;
       inset: 0;
       display: flex;
+      overflow-y: auto;
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -357,13 +358,15 @@
   background: #fff;
   border-radius: 24px;
   text-align: left;
-  padding: 2rem 2.2rem;
+  padding: 1.2rem;
   box-shadow: 0 12px 28px rgba(66,45,40,0.14);
   min-height: 360px;
   max-height: 85vh;  /* Add this */
   overflow-y: auto;   /* Add this */
   animation: fadeIn 1.5s ease-out;
   position: relative;
+  max-height: 85vh; /* ADDED: Limit height on mobile */
+  overflow-y: auto; /* ADDED: Enable scrolling within card */
 }
     .letter-title {
       font-size: clamp(1.5rem, 5vw, 2.6rem);
